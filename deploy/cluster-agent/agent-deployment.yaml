@@ -22,9 +22,16 @@ rules:
   - configmaps
   - secrets
   - resourcequotas
-  - nodes
   verbs:
   - '*'
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - watch
+  - list
 - apiGroups:
   - ""
   resources:
